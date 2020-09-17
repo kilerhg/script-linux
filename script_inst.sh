@@ -9,6 +9,7 @@ sudo add-apt-repository ppa:polychromatic/stable -y
 sudo add-apt-repository ppa:lutris-team/lutris -y
 sudo add-apt-repository ppa:webupd8team/java -y
 sudo add-apt-repository ppa:micahflee/ppa -y
+sudo add-apt-repository ppa:git-core/ppa -y
 
 cat <<EOF | sudo tee /etc/apt/sources.list.d/tor.list
 deb https://deb.torproject.org/torproject.org bionic main
@@ -86,6 +87,7 @@ sudo apt-get install oracle-java8-installer -y
 ## Instalando Aplicações com Apt
 
 sudo apt install virtualbox -y
+sudo apt install git -y
 
 
 ## Drivers Mouse Razer
@@ -101,6 +103,7 @@ sudo apt install tor -y
 sudo apt install torbrowser-launcher -y
 
 ## Finalizações e Otimizações
+sudo apt upgrade --fix-broken
 sudo apt install flatpak -y
 sudo apt update && sudo apt dist-upgrade -y
 sudo apt upgrade -y
