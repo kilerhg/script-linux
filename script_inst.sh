@@ -3,7 +3,7 @@
 ## Adicionar PPAs / Chaves
 
 sudo apt update -y
-
+## SOBE A MIRA FDP
 sudo add-apt-repository ppa:openrazer/stable -y
 sudo add-apt-repository ppa:polychromatic/stable -y
 sudo add-apt-repository ppa:lutris-team/lutris -y
