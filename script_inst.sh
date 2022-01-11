@@ -3,7 +3,7 @@
 ## Adicionar PPAs / Chaves
 
 sudo apt update -y
-## SOBE A MIRA FDP
+
 sudo add-apt-repository ppa:openrazer/stable -y
 sudo add-apt-repository ppa:polychromatic/stable -y
 sudo add-apt-repository ppa:lutris-team/lutris -y
@@ -38,7 +38,7 @@ sudo apt update -y
 ## Instalando Drivers Placa de video ##
 
 sudo apt install nvidia-prime -y
-sudo apt install nvidia-driver-440-server -y
+sudo apt install nvidia-driver-495-server -y
 
 ## Instalando Snap ##
 
@@ -71,6 +71,8 @@ sudo snap install photogimp
 sudo snap install typora
 sudo snap install notepad-plus-plus
 sudo snap install spotify
+sudo snap install dbeaver-ce
+sudo snap install gitkraken --classic
 
 sudo apt update -y
 
@@ -88,12 +90,20 @@ sudo apt-get install oracle-java8-installer -y
 
 sudo apt install virtualbox -y
 sudo apt install git -y
+sudo apt install vim -y
 
 
-## Drivers Mouse Razer
+## Personalizando Vim com Space Vim
 
-sudo apt install openrazer-meta -y
-sudo apt install polychromatic -y
+curl -sLf https://spacevim.org/install.sh | bash
+
+## Personalizando Terminal ##
+
+sudo apt install zsh -y
+$ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 ## Instalação Tor
 
@@ -113,6 +123,11 @@ sudo apt autoremove -y
 rm *.deb
 
 echo "FIM....."
+
+firefox https://gist.github.com/dogrocker/1efb8fd9427779c827058f873b94df95
+firefox https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k
+
+
 
 
 
