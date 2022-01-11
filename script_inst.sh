@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# version 1.0.0
+
 ## Adicionar PPAs / Chaves
 
 sudo apt update -y
@@ -38,7 +40,7 @@ sudo apt update -y
 ## Instalando Drivers Placa de video ##
 
 sudo apt install nvidia-prime -y
-sudo apt install nvidia-driver-495-server -y
+sudo apt install nvidia-driver-470 -y
 
 ## Instalando Snap ##
 
