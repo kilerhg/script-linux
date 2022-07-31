@@ -102,7 +102,7 @@ wget https://bootstrap.pypa.io/get-pip.py
 python3 get-pip.py
 python3.7 get-pip.py
 apt install python3-tk
-
+sudo apt install python3.7-tk
 ## Installing java Environment ##
 
 sudo apt install openjdk-8-jdk -y
