@@ -23,7 +23,6 @@ curl https://deb.torproject.org/torproject.org/A3C4F0F979CAA22CDBA8F512EE8CBC9E8
 
 gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | apt-key add -
 
-
 sudo apt update -y
 sudo dpkg --configure -a
 
@@ -61,16 +60,12 @@ wget -c https://github.com/shiftkey/desktop/releases/download/release-2.5.4-linu
 
 wget -c http://launcher.technicpack.net/launcher4/591/TechnicLauncher.jar
 
-
-
 sudo dpkg -i *.deb
 ojang.com/download/Minecraft.deb
 
 wget -c https://github.com/shiftkey/desktop/releases/download/release-2.5.4-linux1/GitHubDesktop-linux-2.5.4-linux1.deb
 
 wget -c http://launcher.technicpack.net/launcher4/591/TechnicLauncher.jar
-
-
 
 sudo dpkg -i *.deb
 
@@ -90,7 +85,6 @@ sudo snap install gitkraken --classic
 sudo snap install notion-snap
 
 sudo apt update -y
-
 
 echo "Finish Install Snap's apps"
 echo ""
@@ -242,11 +236,4 @@ rm -rf *.deb
 rm -rf *.zip
 
 echo "Finish All installation....."
-
-
-
-
-
-
-
-
+echo ""

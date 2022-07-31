@@ -29,11 +29,13 @@ Install the fonts at [Fonts](./fonts)
 
 ### Run
 
-Open Your favorite terminal and run: ```sudo sh based_type/enviroment/script_install.sh```
+Check [Tested versions](##Tested Linux Distros) to get path and run.
+
+Open Your favorite terminal and run: ```sudo sh based_type/enviroment/filename.sh```
 
 ## Authors
 
-* Lucas Nunes - Initial work
+* [Lucas Nunes](https://www.github.com/kilerhg) - Initial work
 
 ## License
 
