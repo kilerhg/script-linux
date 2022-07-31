@@ -48,11 +48,23 @@ sudo apt install snapd -y
 
 sudo apt update -y
 
-## Installing Exertnal Softwares ##
+## Installing External Softwares ##
 
 wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
+wget -c https://launcher.m
+wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
 wget -c https://launcher.mojang.com/download/Minecraft.deb
+
+wget -c https://github.com/shiftkey/desktop/releases/download/release-2.5.4-linux1/GitHubDesktop-linux-2.5.4-linux1.deb
+
+wget -c http://launcher.technicpack.net/launcher4/591/TechnicLauncher.jar
+
+
+
+sudo dpkg -i *.deb
+ojang.com/download/Minecraft.deb
 
 wget -c https://github.com/shiftkey/desktop/releases/download/release-2.5.4-linux1/GitHubDesktop-linux-2.5.4-linux1.deb
 
@@ -80,7 +92,7 @@ sudo snap install notion-snap
 sudo apt update -y
 
 
-echo "Finish INstall Snap's apps"
+echo "Finish Install Snap's apps"
 echo ""
 
 ## Installing python Environment ##
