@@ -101,6 +101,7 @@ python3.7 -m pip install --user virtualenv
 wget https://bootstrap.pypa.io/get-pip.py
 python3 get-pip.py
 python3.7 get-pip.py
+apt install python3-tk
 
 ## Installing java Environment ##
 
@@ -127,6 +128,8 @@ sudo apt-get install \
     curl \
     gnupg \
     lsb-release -y
+
+sudo apt --fix-broken install
 
 ## Adding Docker repository to the list of sources of Ubuntu ##
 
