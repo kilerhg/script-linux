@@ -29,7 +29,7 @@ Install the fonts at [Fonts](./fonts)
 
 ### Run
 
-Check [Tested versions](##Tested Linux Distros) to get path and run.
+Check [Tested versions](#tested-linux-distros) to get path and run.
 
 Open Your favorite terminal and run: ```sudo sh based_type/enviroment/filename.sh```
 
