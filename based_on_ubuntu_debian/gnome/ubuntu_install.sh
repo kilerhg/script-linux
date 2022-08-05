@@ -60,6 +60,8 @@ wget -c https://github.com/shiftkey/desktop/releases/download/release-2.5.4-linu
 
 wget -c http://launcher.technicpack.net/launcher4/591/TechnicLauncher.jar
 
+wget -c https://updates.insomnia.rest/downloads/ubuntu/latest
+
 sudo dpkg -i *.deb
 ojang.com/download/Minecraft.deb
 
@@ -121,39 +123,14 @@ sudo apt install gh
 ## Installing Docker prerequisites ##
 
 sudo apt update && sudo apt upgrade -y
-sudo apt remove docker docker-engine docker.io containerd runc -y
-sudo apt-get install \
-    apt-transport-https \
-    ca-certificates \
-    curl \
-    gnupg \
-    lsb-release -y
 
 sudo apt --fix-broken install
 
-## Adding Docker repository to the list of sources of Ubuntu ##
+sudo apt install docker.io
 
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-echo \
-  "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
-  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+curl -fsSL https://get.docker.com/ | sh
 
-## Installing docker core ##
-
-sudo apt update && sudo apt upgrade -y
-sudo apt-get install docker-ce docker-ce-cli containerd.io -y
-
-## Setup the right permissions for the current user ##
-
-## Install the Docker Compose:
-
-sudo curl -L "https://github.com/docker/compose/releases/download/1.29.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
-sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
-
-sudo usermod -aG docker $USER
-
-echo "Finish install docker compose"
+echo "Finish install docker"
 echo ""
 
 ## Install aws-cli ##
