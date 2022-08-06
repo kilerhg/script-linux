@@ -1,6 +1,6 @@
 # Script Linux
 
-## Describe
+## Description
 
 My Script To install some Userfull apps i use, fell free to clone and create your own ;)
 
@@ -32,6 +32,22 @@ Install the fonts at [Fonts](./fonts)
 Check [Tested versions](#tested-linux-distros) to get path and run.
 
 Open Your favorite terminal and run: ```sudo sh based_type/enviroment/filename.sh```
+
+## Recomendations for each Enviroment
+
+### GNU
+
+#### Extensions
+
+* [Bubble effect window](https://extensions.gnome.org/extension/3210/compiz-windows-effect/)
+* [Lamp Effect](https://extensions.gnome.org/extension/3740/compiz-alike-magic-lamp-effect/)
+* []()
+* []()
+
+#### Themes and icons
+
+* [Dracula](https://www.gnome-look.org/p/1687249/)
+* [Beautyline](https://www.gnome-look.org/p/1425426)
 
 ## Authors
 

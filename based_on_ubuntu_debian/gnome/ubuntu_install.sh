@@ -41,6 +41,12 @@ sudo apt update -y
 sudo apt install nvidia-prime -y
 sudo apt install nvidia-driver-515 -y
 
+## Installing Flatpak ##
+
+sudo apt install flatpak -y
+flatpak update
+flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
 ## Installing Snap ##
 
 sudo apt install snapd -y
@@ -71,24 +77,27 @@ wget -c http://launcher.technicpack.net/launcher4/591/TechnicLauncher.jar
 
 sudo dpkg -i *.deb
 
-## Installing Snap's apps ##
+## Installing Flatpak's apps ##
 
-sudo snap install obs-studio --clasic
-sudo snap install code --classic
-sudo snap install audacity
-sudo snap install discord
-sudo snap install pycharm-community --classic
-sudo snap install photogimp
-sudo snap install typora
-sudo snap install notepad-plus-plus
-sudo snap install spotify
-sudo snap install dbeaver-ce
-sudo snap install gitkraken --classic
-sudo snap install notion-snap
+sudo flatpak install flathub com.obsproject.Studio
+sudo flatpak install flathub com.visualstudio.code
+sudo flatpak install flathub org.audacityteam.Audacity
+sudo flatpak install flathub com.discordapp.Discord
+sudo flatpak install flathub org.gimp.GIMP
+sudo flatpak install flathub io.typora.Typora
+sudo flatpak install flathub com.sublimetext.three
+sudo flatpak install flathub com.spotify.Client
+sudo flatpak install flathub io.dbeaver.DBeaverCommunity
+sudo flatpak install flathub com.axosoft.GitKraken
+sudo flatpak install flathub io.github.Figma_Linux.figma_linux
+sudo flatpak install flathub rest.insomnia.Insomnia
+sudo flatpak install flathub com.getpostman.Postman
+sudo flatpak install flathub org.videolan.VLC
+sudo flatpak install flathub org.gnome.Evince
 
 sudo apt update -y
 
-echo "Finish Install Snap's apps"
+echo "Finish Install Flatpack's apps"
 echo ""
 
 ## Installing python Environment ##
@@ -199,10 +208,8 @@ echo ""
 ## Otimizations and final steps ##
 
 sudo apt upgrade --fix-broken
-sudo apt install flatpak -y
 sudo apt update && sudo apt dist-upgrade -y
 sudo apt upgrade -y
-flatpak update
 sudo apt autoclean
 sudo apt autoremove -y
 
