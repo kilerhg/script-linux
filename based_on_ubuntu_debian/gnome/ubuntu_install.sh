@@ -94,6 +94,7 @@ sudo flatpak install flathub rest.insomnia.Insomnia
 sudo flatpak install flathub com.getpostman.Postman
 sudo flatpak install flathub org.videolan.VLC
 sudo flatpak install flathub org.gnome.Evince
+sudo flatpak install flathub org.kde.kdenlive
 
 sudo apt update -y
 
