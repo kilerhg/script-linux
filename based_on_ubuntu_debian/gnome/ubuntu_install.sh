@@ -79,22 +79,24 @@ sudo dpkg -i *.deb
 
 ## Installing Flatpak's apps ##
 
-sudo flatpak install flathub com.obsproject.Studio
-sudo flatpak install flathub com.visualstudio.code
-sudo flatpak install flathub org.audacityteam.Audacity
-sudo flatpak install flathub com.discordapp.Discord
-sudo flatpak install flathub org.gimp.GIMP
-sudo flatpak install flathub io.typora.Typora
-sudo flatpak install flathub com.sublimetext.three
-sudo flatpak install flathub com.spotify.Client
-sudo flatpak install flathub io.dbeaver.DBeaverCommunity
-sudo flatpak install flathub com.axosoft.GitKraken
-sudo flatpak install flathub io.github.Figma_Linux.figma_linux
-sudo flatpak install flathub rest.insomnia.Insomnia
-sudo flatpak install flathub com.getpostman.Postman
-sudo flatpak install flathub org.videolan.VLC
-sudo flatpak install flathub org.gnome.Evince
-sudo flatpak install flathub org.kde.kdenlive
+flatpak install flathub com.obsproject.Studio -y
+flatpak install flathub com.visualstudio.code -y
+flatpak install flathub org.audacityteam.Audacity -y
+flatpak install flathub com.discordapp.Discord -y
+flatpak install flathub org.gimp.GIMP -y
+flatpak install flathub io.typora.Typora -y
+flatpak install flathub com.sublimetext.three -y
+flatpak install flathub com.spotify.Client -y
+flatpak install flathub io.dbeaver.DBeaverCommunity -y
+flatpak install flathub com.axosoft.GitKraken -y
+flatpak install flathub io.github.Figma_Linux.figma_linux -y
+flatpak install flathub rest.insomnia.Insomnia -y
+flatpak install flathub com.getpostman.Postman -y
+flatpak install flathub org.videolan.VLC -y
+flatpak install flathub org.gnome.Evince -y
+flatpak install flathub org.kde.kdenlive -y
+flatpak install flathub org.kde.kstars -y
+flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community -y
 
 sudo apt update -y
 
