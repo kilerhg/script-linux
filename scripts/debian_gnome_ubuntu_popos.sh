@@ -1,6 +1,9 @@
 #!/bin/bash
 
-# version 2.0.0
+# version 3.0.0
+
+mkdir temp/
+cd temp
 
 ## Adding PPAs / Keys ##
 
@@ -13,6 +16,7 @@ sudo add-apt-repository ppa:webupd8team/java -y
 sudo add-apt-repository ppa:micahflee/ppa -y
 sudo add-apt-repository ppa:git-core/ppa -y
 sudo add-apt-repository ppa:deadsnakes/ppa -y
+sudo add-apt-repository universe -y
 
 cat <<EOF | sudo tee /etc/apt/sources.list.d/tor.list
 deb https://deb.torproject.org/torproject.org bionic main
@@ -47,10 +51,6 @@ sudo apt install flatpak -y
 flatpak update
 flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-## Installing Snap ##
-
-sudo apt install snapd -y
-
 sudo apt update -y
 
 ## Installing External Softwares ##
@@ -80,7 +80,6 @@ sudo dpkg -i *.deb
 ## Installing Flatpak's apps ##
 
 flatpak install flathub com.obsproject.Studio -y
-flatpak install flathub com.visualstudio.code -y
 flatpak install flathub org.audacityteam.Audacity -y
 flatpak install flathub com.discordapp.Discord -y
 flatpak install flathub org.gimp.GIMP -y
@@ -103,9 +102,14 @@ sudo apt update -y
 echo "Finish Install Flatpack's apps"
 echo ""
 
+## Installing Apt apps ##
+
+sudo apt install htop -y
+sudo apt install code -y
+
 ## Installing python Environment ##
 
-sudo apt update
+sudo apt update -y
 sudo apt install software-properties-common -y
 sudo add-apt-repository ppa:deadsnakes/ppa -y
 sudo apt install python3.7 -y
@@ -115,8 +119,8 @@ python3.7 -m pip install --user virtualenv
 wget https://bootstrap.pypa.io/get-pip.py
 python3 get-pip.py
 python3.7 get-pip.py
-apt install python3-tk
-sudo apt install python3.7-tk
+apt install python3-tk -y
+apt install python3.7-tk -y
 ## Installing java Environment ##
 
 sudo apt install openjdk-8-jdk -y
@@ -127,8 +131,8 @@ sudo apt install maven -y
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
 sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
-sudo apt update
-sudo apt install gh
+sudo apt update -y
+sudo apt install gh -y
 
 # Docker Installation #
 
@@ -136,9 +140,9 @@ sudo apt install gh
 
 sudo apt update && sudo apt upgrade -y
 
-sudo apt --fix-broken install
+sudo apt --fix-broken install -y
 
-sudo apt install docker.io
+sudo apt install docker.io -y
 
 curl -fsSL https://get.docker.com/ | sh
 
@@ -182,18 +186,11 @@ echo ""
 ## Customizing the System ##
 
 sudo apt install gnome-tweaks -y
+sudo apt-get -y install compiz compiz-gnome compizconfig-settings-manager
 
 ## Customizing the Vim with space vim ##
 
 curl -sLf https://spacevim.org/install.sh | bash
-
-## Customizing the Terminal ##
-
-sudo apt install zsh -y
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 echo "Finish Tor Browser installation"
 echo ""
@@ -210,10 +207,10 @@ echo ""
 
 ## Otimizations and final steps ##
 
-sudo apt upgrade --fix-broken
+sudo apt upgrade --fix-broken -y
 sudo apt update && sudo apt dist-upgrade -y
 sudo apt upgrade -y
-sudo apt autoclean
+sudo apt autoclean -y
 sudo apt autoremove -y
 
 echo "Finish otimizations"
@@ -221,9 +218,17 @@ echo ""
 
 ## Removing the unnecessary Files ##
 
-rm -rf *.deb*
-rm -rf *.deb
-rm -rf *.zip
+cd ..
+rm -rf temp/
+
+## Customizing the Terminal ##
+
+sudo apt install zsh -y
+chsh -s $(which zsh)
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 echo "Finish All installation....."
 echo ""

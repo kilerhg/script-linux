@@ -31,7 +31,17 @@ Install the fonts at [Fonts](./fonts)
 
 Check [Tested versions](#tested-linux-distros) to get path and run.
 
-Open Your favorite terminal and run: ```sudo sh based_type/enviroment/filename.sh```
+Open Your favorite terminal and run: ```sh scripts/debian_gnome_ubuntu_popos.sh```
+
+which means ``` scripts/based_interface_extra_info.sh```
+
+### Customize zsh terminal
+
+Run ´vim ~/.zshrc´ to open zsh config file
+
+find ´ZSH_THEME=´ and replace with ´ZSH_THEME="powerlevel9k/powerlevel10k"´
+
+find ´plugins=(git)´ and replace with ´plugins=(git colorize zsh-autosuggestions zsh-syntax-highlighting docker)´
 
 ## Recomendations for each Enviroment
 
@@ -41,13 +51,16 @@ Open Your favorite terminal and run: ```sudo sh based_type/enviroment/filename.s
 
 * [Bubble effect window](https://extensions.gnome.org/extension/3210/compiz-windows-effect/)
 * [Lamp Effect](https://extensions.gnome.org/extension/3740/compiz-alike-magic-lamp-effect/)
-* []()
-* []()
+* [Dash to panel](https://extensions.gnome.org/extension/1160/dash-to-panel/)
+* [Blur my Shell](https://extensions.gnome.org/extension/3193/blur-my-shell/)
+* [Burn My Windows](https://extensions.gnome.org/extension/4679/burn-my-windows/)
+* [Desktop Cube](https://extensions.gnome.org/extension/4648/desktop-cube/)
 
 #### Themes and icons
 
 * [Dracula](https://www.gnome-look.org/p/1687249/)
 * [Beautyline](https://www.gnome-look.org/p/1425426)
+* [Oreo Cursor](https://www.gnome-look.org/p/1360254)
 
 ## Authors
 
