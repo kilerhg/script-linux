@@ -2,8 +2,7 @@
 
 # version 3.0.0
 
-mkdir temp/
-cd temp
+mkdir temp/ && cd temp
 
 ## Adding PPAs / Keys ##
 
@@ -146,6 +145,8 @@ sudo apt install docker.io -y
 
 curl -fsSL https://get.docker.com/ | sh
 
+sudo usermod -a -G docker $USER
+
 echo "Finish install docker"
 echo ""
 
@@ -218,8 +219,7 @@ echo ""
 
 ## Removing the unnecessary Files ##
 
-cd ..
-rm -rf temp/
+cd .. && rm -rf temp/
 
 ## Customizing the Terminal ##
 
