@@ -2,7 +2,7 @@
 
 ## Description
 
-My Script To install some Userfull apps i use, fell free to clone and create your own ;)
+Some after format scripts to install everything that you would need to your gaming, daily and development environment, fell free to contribute and make this repo even more helpful.
 
 ## Tested Linux Distros
 
@@ -58,8 +58,8 @@ find ´plugins=(git)´ and replace with ´plugins=(git colorize zsh-autosuggesti
 
 #### Themes and icons
 
-* [Dracula](https://www.gnome-look.org/p/1687249/)
-* [Beautyline](https://www.gnome-look.org/p/1425426)
+* [Dracula Theme](https://www.gnome-look.org/p/1687249/)
+* [Beautyline Icons](https://www.gnome-look.org/p/1425426)
 * [Oreo Cursor](https://www.gnome-look.org/p/1360254)
 
 ## Authors
