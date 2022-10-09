@@ -94,12 +94,12 @@ flatpak install flathub org.kde.kdenlive -y
 flatpak install flathub org.kde.kstars -y
 flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community -y
 
-sudo apt update -y
-
 echo "Finish Install Flatpack's apps"
 echo ""
 
 ## Installing Apt apps ##
+
+sudo apt update -y
 
 sudo apt install htop -y
 sudo apt install code -y
