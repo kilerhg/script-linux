@@ -8,8 +8,6 @@ mkdir temp/ && cd temp
 
 sudo apt update -y
 
-sudo add-apt-repository ppa:openrazer/stable -y
-sudo add-apt-repository ppa:polychromatic/stable -y
 sudo add-apt-repository ppa:lutris-team/lutris -y
 sudo add-apt-repository ppa:webupd8team/java -y
 sudo add-apt-repository ppa:micahflee/ppa -y
