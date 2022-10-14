@@ -14,6 +14,7 @@ sudo add-apt-repository ppa:micahflee/ppa -y
 sudo add-apt-repository ppa:git-core/ppa -y
 sudo add-apt-repository ppa:deadsnakes/ppa -y
 sudo add-apt-repository universe -y
+sudo add-apt-repository ppa:pj-assis/ppa
 
 cat <<EOF | sudo tee /etc/apt/sources.list.d/tor.list
 deb https://deb.torproject.org/torproject.org bionic main
@@ -186,6 +187,7 @@ echo ""
 
 sudo apt install gnome-tweaks -y
 sudo apt-get -y install compiz compiz-gnome compizconfig-settings-manager
+sudo apt-get install guvcview
 
 ## Customizing the Vim with space vim ##
 
