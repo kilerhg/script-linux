@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# installing fonts
+
+cp fonts/*.ttf ~/.local/share/fonts/
+fc-cache -f -v # Updates to detect the installed fonts
+
 # version 3.0.0
 
 mkdir temp/ && cd temp
