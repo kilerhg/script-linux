@@ -46,7 +46,7 @@ sudo apt update -y
 ## Installing Drivers for Video Card ##
 
 sudo apt install nvidia-prime -y
-sudo apt install nvidia-driver-515 -y
+sudo apt install nvidia-driver-535 -y
 
 ## Installing Flatpak ##
 
