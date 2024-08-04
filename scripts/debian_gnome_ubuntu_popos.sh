@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "Starting Install script"
+echo ""
+
 # installing fonts
 
 cp fonts/*.ttf ~/.local/share/fonts/
@@ -13,22 +16,8 @@ mkdir temp/ && cd temp
 
 sudo apt update -y
 
-sudo add-apt-repository ppa:lutris-team/lutris -y
-sudo add-apt-repository ppa:webupd8team/java -y
-sudo add-apt-repository ppa:micahflee/ppa -y
-sudo add-apt-repository ppa:git-core/ppa -y
 sudo add-apt-repository ppa:deadsnakes/ppa -y
 sudo add-apt-repository universe -y
-sudo add-apt-repository ppa:pj-assis/ppa
-
-cat <<EOF | sudo tee /etc/apt/sources.list.d/tor.list
-deb https://deb.torproject.org/torproject.org bionic main
-deb-src https://deb.torproject.org/torproject.org bionic main
-EOF
-
-curl https://deb.torproject.org/torproject.org/A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89.asc | gpg --import
-
-gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | apt-key add -
 
 sudo apt update -y
 sudo dpkg --configure -a
@@ -48,6 +37,10 @@ sudo apt update -y
 sudo apt install nvidia-prime -y
 sudo apt install nvidia-driver-535 -y
 
+echo "Finish installing Nvidia Drivers"
+echo ""
+
+
 ## Installing Flatpak ##
 
 sudo apt install flatpak -y
@@ -55,6 +48,9 @@ flatpak update
 flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 sudo apt update -y
+
+echo "Finish installing Flatpak"
+echo ""
 
 ## Installing External Softwares ##
 
@@ -79,6 +75,9 @@ wget -c https://github.com/shiftkey/desktop/releases/download/release-2.5.4-linu
 wget -c http://launcher.technicpack.net/launcher4/591/TechnicLauncher.jar
 
 sudo dpkg -i *.deb
+
+echo "Finish install External .deb Sofwares"
+echo ""
 
 ## Installing Flatpak's apps ##
 
@@ -115,19 +114,24 @@ sudo apt install code -y
 sudo apt update -y
 sudo apt install software-properties-common -y
 sudo add-apt-repository ppa:deadsnakes/ppa -y
-sudo apt install python3.7 -y
-sudo apt install python3.7-distutils -y
-python3.7 -m pip install pip
-python3.7 -m pip install --user virtualenv
-wget https://bootstrap.pypa.io/get-pip.py
-python3 get-pip.py
-python3.7 get-pip.py
-apt install python3-tk -y
-apt install python3.7-tk -y
+
+### Install Python 3.10 & 3.12 ###
+
+sudo apt install python3.10
+sudo apt install python3.10-venv
+sudo apt install python3.12
+sudo apt install python3.12-venv
+
+echo "Finish install Python"
+echo ""
+
 ## Installing java Environment ##
 
 sudo apt install openjdk-8-jdk -y
 sudo apt install maven -y
+
+echo "Finish install Java Environment"
+echo ""
 
 ## Installing Github desktop CLI ##
 
@@ -137,6 +141,9 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githu
 sudo apt update -y
 sudo apt install gh -y
 
+echo "Finish install Github CLI"
+echo ""
+
 # Docker Installation #
 
 ## Installing Docker prerequisites ##
@@ -145,9 +152,24 @@ sudo apt update && sudo apt upgrade -y
 
 sudo apt --fix-broken install -y
 
-sudo apt install docker.io -y
+## Add Docker's official GPG key:
 
-curl -fsSL https://get.docker.com/ | sh
+sudo apt update
+sudo apt install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+## Add the repository to Apt sources:
+
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+sudo apt update
+
+sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 sudo usermod -a -G docker $USER
 
@@ -169,7 +191,6 @@ echo ""
 
 sudo apt install gamemode -y
 sudo apt install steam -y
-sudo apt install lutris -y
 sudo apt install wine -y
 
 echo "Finish Game Enviroment"
@@ -185,7 +206,7 @@ sudo apt install virtualbox -y
 sudo apt install git -y
 sudo apt install vim -y
 
-echo "Finish install of git, vim vbox"
+echo "Finish install of git, vim & virtualbox"
 echo ""
 
 ## Customizing the System ##
@@ -198,17 +219,7 @@ sudo apt-get install guvcview
 
 curl -sLf https://spacevim.org/install.sh | bash
 
-echo "Finish Tor Browser installation"
-echo ""
-
-## Installing Tor Browser ##
-
-sudo apt install apt-transport-https -y
-sudo apt install tor deb.torproject.org-keyring -y
-sudo apt install tor -y
-sudo apt install torbrowser-launcher -y
-
-echo "Finish Tor Browser installation"
+echo "Finish Space VIM installation"
 echo ""
 
 ## Otimizations and final steps ##
@@ -219,7 +230,7 @@ sudo apt upgrade -y
 sudo apt autoclean -y
 sudo apt autoremove -y
 
-echo "Finish otimizations"
+echo "Finish Cleaning"
 echo ""
 
 ## Removing the unnecessary Files ##
