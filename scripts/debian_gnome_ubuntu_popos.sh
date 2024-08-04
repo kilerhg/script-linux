@@ -37,7 +37,7 @@ sudo apt update -y
 sudo apt install nvidia-prime -y
 sudo apt install nvidia-driver-535 -y
 
-echo "Finish installing Nvidia Drivers"
+echo "Finish Installing Nvidia Drivers"
 echo ""
 
 
@@ -76,7 +76,7 @@ wget -c http://launcher.technicpack.net/launcher4/591/TechnicLauncher.jar
 
 sudo dpkg -i *.deb
 
-echo "Finish install External .deb Sofwares"
+echo "Finish Installing External .deb Sofwares"
 echo ""
 
 ## Installing Flatpak's apps ##
@@ -99,7 +99,7 @@ flatpak install flathub org.kde.kdenlive -y
 flatpak install flathub org.kde.kstars -y
 flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community -y
 
-echo "Finish Install Flatpack's apps"
+echo "Finish Installing Flatpack's apps"
 echo ""
 
 ## Installing Apt apps ##
@@ -122,7 +122,7 @@ sudo apt install python3.10-venv
 sudo apt install python3.12
 sudo apt install python3.12-venv
 
-echo "Finish install Python"
+echo "Finish Installing Python"
 echo ""
 
 ## Installing java Environment ##
@@ -130,7 +130,7 @@ echo ""
 sudo apt install openjdk-8-jdk -y
 sudo apt install maven -y
 
-echo "Finish install Java Environment"
+echo "Finish Installing Java Environment"
 echo ""
 
 ## Installing Github desktop CLI ##
@@ -141,7 +141,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githu
 sudo apt update -y
 sudo apt install gh -y
 
-echo "Finish install Github CLI"
+echo "Finish Installing Github CLI"
 echo ""
 
 # Docker Installation #
@@ -173,7 +173,7 @@ sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin dock
 
 sudo usermod -a -G docker $USER
 
-echo "Finish install docker"
+echo "Finish Installing docker"
 echo ""
 
 ## Install aws-cli ##
@@ -184,7 +184,7 @@ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip
 unzip awscliv2.zip
 sudo ./aws/install
 
-echo "Finish install AWS CLI"
+echo "Finish Installing AWS CLI"
 echo ""
 
 ## Games enviroment ##
@@ -206,7 +206,7 @@ sudo apt install virtualbox -y
 sudo apt install git -y
 sudo apt install vim -y
 
-echo "Finish install of git, vim & virtualbox"
+echo "Finish Installing of git, vim & virtualbox"
 echo ""
 
 ## Customizing the System ##
